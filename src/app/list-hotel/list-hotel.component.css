@@ -1,0 +1,52 @@
+.hotelList{
+  text-align: center;
+
+}
+
+.big{
+  font-size: 25px;
+}
+
+.medium{
+  font-size: 20px;
+}
+
+.small{
+  font-size: 18px;
+}
+
+.hotelName{
+  font-size: 20px;
+}
+
+.hotelBoxContainer{
+  width: 80%;
+  margin:auto;
+  text-align: center;
+  padding: 10px 20px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.hotelBox{
+  display: inline-block;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 1.5% 8%;
+  width: 25px;
+  height:290px;
+  background-color: red;
+  border: 1px solid black;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.moreDetail{
+
+}
+
+img{
+  width: 197.5px;
+  height: 263.328px;
+}
