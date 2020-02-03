@@ -1,0 +1,127 @@
+
+<div class='pics'>
+    <img src={{hotelData.hotelPicture[0]}} class="hotelPic1">
+  <div class="container1">
+      <img src={{hotelData.hotelPicture[1]}} class="hotelPic2345">
+      <img src={{hotelData.hotelPicture[2]}} class="hotelPic2345">
+  </div>
+  <div class="container2">
+      <img src={{hotelData.hotelPicture[3]}} class="hotelPic2345">
+      <img src={{hotelData.hotelPicture[4]}} class="hotelPic2345">
+  </div>
+</div>
+
+<div class='detailAndReserve'>
+  <div class="hotelDetailContainer">
+    <div class="hotelDetail">
+      <div class="hotelName " >
+        <p style="font-size: 30px; margin-top:0; " class="boldFont"><b>{{hotelData.hotelName}}</b></p>
+        <span style='font-size: 16px; margin-right: 10px;' class="lightFont"><b>{{hotelData.province}}</b></span>
+        <span style='font-size: 16px; ' class="lightFont">{{hotelData.district}}</span>
+      </div>
+      <div class="hotelGeneral">
+        <p class="lightFont">{{hotelData.maxGuest}} guests {{hotelData.bedroomAmount}} bedroom {{hotelData.bedAmount}} bed {{hotelData.bathroomAmount}} bathroom</p>
+      </div>
+      <div class="hotelAddress">
+        <span style="margin-right: 10px;">สถานที่ติดต่อ</span>
+        <span class="lightFont">{{hotelData.address}}</span>
+      </div>
+      <div class="hotelTel">
+        <label style="margin-right: 10px;">เบอร์โทร</label>
+        <span class="lightFont">{{hotelData.tel}}</span>
+      </div>
+      <div class="hotelDescrip">
+        <p class="lightFont">{{hotelData.description}}</p>
+      </div>
+      <div class="hotelFacilities lightFont">
+        <p class="boldFont" >สิ่งอำนวยความสะดวก</p>
+        <div style="width: 33%; margin:0; padding:0; display:inline-block;" *ngFor="let fac of hotelData.hotelFac" >
+          <span style="margin-right: 10px;"><label style="margin-right: 10px; line-height: 10px;">•</label>{{fac}}</span>
+        </div>
+      </div>
+      <div class="hotelMap" style="padding-bottom: 16px;">
+        <!-- <p class="boldFont">แผนที่</p>
+        <div class="mapContainer" style='margin:auto;'>
+          <google-map height="100%" width="100%" [zoom]="zoom" [center]="myLatLng" ></google-map>
+        </div> -->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+      <!-- <div class="hotelReview">
+        <p>THIS IS REVIEW</p>
+      </div> -->
+    </div>
+
+
+  </div>
+
+  <div class="hotelReserveContainer" >
+    <div class="hotelReserve">
+      <form [formGroup]='reserveData' (ngSubmit)='onSubmit()'>
+      <div class="pricePerNight" >
+        <span class="boldFont" style="margin-right: 10px;">ราคาต่อคืน:</span>
+        <span class="lightFont">{{ pricePerNight}} บาท</span>
+      </div>
+      <div class="date">
+        <p class="boldFont">วันที่เข้าพัก</p>
+        <div style="width:40%; display: inline-block; margin: 0 2.5%;">
+          <p class="lightFont" style="font-size:13px; margin:0; text-align: left;">วัน check-in</p>
+          <input formControlName="dateIn" [(ngModel)]="checkinDate" min={{currentDate}} value={{currentDate}} type='date' class="datePickerDec" (change)="dateDiff()">
+        </div>
+        <div style="width:50%; display: inline-block;  margin: 0 2.5%; ">
+          <p class="lightFont" style="font-size:13px; margin:0; text-align: left; ">วัน check-out</p>
+          <input formControlName="dateOut" [(ngModel)]="checkoutDate" type='date' class="datePickerDec" min={{tomorrowDate}} value={{tomorrowDate}} (change)="dateDiff()">
+        </div>
+      </div>
+      <div class="guest">
+        <label class="boldFont" style="margin-right: 40px;">จำนวนผู้เข้าพัก</label>
+        <select formControlName="guestAmount"  class="lightFont">
+          <option  *ngFor="let number of maxGuestArr">{{number}}</option>
+        </select >
+      </div>
+
+      <div class="calculatePrice">
+
+        <div class="leftItem boldFont">
+          <span>ราคาที่พักต่อคืน:</span>
+        </div>
+        <div class="centerItem lightFont">
+          <span>{{pricePerNight}} </span>
+        </div>
+        <div class="rightItem lightFont">
+          <span>บาท</span>
+        </div>
+        <div class="leftItem boldFont">
+          <span>จำนวนคืนที่พัก:</span>
+        </div>
+        <div class="centerItem lightFont">
+          <span>{{nights}}</span>
+        </div>
+        <div class="rightItem lightFont">
+          <span>คืน</span>
+        </div>
+        <div class="leftItem boldFont">
+          <span>ราคารวมทั้งสิ้น:</span>
+        </div>
+        <div class="centerItem lightFont">
+          <span>{{totalPriceForDis}}</span>
+        </div>
+        <div class="rightItem lightFont">
+          <span>บาท</span>
+        </div>
+
+      </div>
+
+      <div class="reserveButton" >
+        <input class="reserveBtn boldFont" type='submit' value='จองห้องพัก' >
+      </div>
+
+    </form>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+

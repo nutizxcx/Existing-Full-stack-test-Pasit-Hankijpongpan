@@ -1,0 +1,38 @@
+.lightFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 100;
+}
+
+.boldFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+}
+
+.suggestItem {
+  /* margin: auto; */
+  padding: 10px 20px;
+  background-color: white;
+  height: 49px;
+  border: 1px solid #E5E5E5;
+  border-top: 0;
+}
+
+.suggestItem:hover {
+  cursor: pointer;
+  background-color: #E5E5E5;
+}
+.searchBox {
+  font-size: 14px;
+  padding: 10px 15px;
+  /* border-top-left-radius: 15px; */
+  /* border-top-right-radius: 15px; */
+  border: 1px solid #E5E5E5;
+
+}
+
+
+.searchBoxContainer{
+  position: relative;
+  bottom:15px;
+}
+

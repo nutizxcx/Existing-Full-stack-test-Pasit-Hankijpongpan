@@ -1,73 +1,53 @@
-<app-navbar></app-navbar>
+<h1 class="boldFont" style="margin-top:25px; text-align: center;">{{selectedPv}}</h1>
+  <div class='hotelBoxContainer' >
+
+    <div class='hotelBox' *ngFor="let hotel of hotelListData " (click)="hotelSelect(hotel.hotelID)">
+      <div style='height:60%' class="picContainer">
+        <img src={{hotel.picURL}} class="hotelPic">
+      </div>
+      <div style="padding: 0 10px;">
+        <p class='boldFont' style="font-size: 18px; margin-bottom: 0;"><b>{{hotel.hotelName}}</b></p>
+        <p class='lightFont' style="font-size: 13px; margin-top: 7px;">ราคาต่อคืน: {{hotel.pricePerNight}} บาท</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- <div style="background-color:red; text-align: center;">
+    <p>เพิ่มเติม</p>
+  </div> -->
+
 <div class='hotelList'>
-  <p class='big'>กรุงเทพมหานคร</p>
-  <p class='medium'>เขต: ราษฎร์บูรณะ</p>
+
+  <div class="province">
+    <p style="margin-bottom: 0; font-size: 13px">จังหวัด</p>
+    <select class="lightFont" [(ngModel)]="selectedPv" (change)="selectDt()">
+    <option *ngFor="let item of pvAndDt | keyvalue">{{item.key}}</option>
+  </select>
+  </div>
+  <div class="district">
+    <p style="margin-bottom: 0; font-size: 13px;">อำเภอ/เขต</p>
+  <select class="lightFont dropdown" [(ngModel)]="selectedDt">
+    <option *ngFor="let item of dtChoice ">{{item}}</option>
+  </select>
 </div>
-  <div class='hotelBoxContainer'>
 
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
+  <div class="date">
+    <div style="display: inline-block;">
+      <p class="lightFont" style="font-size:13px; margin:0; text-align: left;"><b>วัน check-in</b></p>
+      <input type='date' class="lightFont datePickerDec1" [(ngModel)]="checkinDate" value={{checkinDate}} min={{currentDate}} max={{checkoutDate}} (change)="getData()">
     </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
+    <div style="display: inline-block;">
+      <p class="lightFont" style="font-size:13px; margin:0; text-align: left;"><b>วัน check-out</b></p>
+      <input type='date' class="lightFont datePickerDec2" [(ngModel)]="checkoutDate" value={{checkoutDate}} min={{checkinDate}} (change)="getData()">
     </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-
   </div>
 
-  <div class='hotelBoxContainer'>
 
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
 
-  </div>
-  <div class='hotelBoxContainer'>
+</div>
 
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
-    <div class='hotelBox'>
-      <!-- <img src='../../assets/logo.png'> -->
-      <h1>XXXX</h1>
-    </div>
 
-  </div>
+
 

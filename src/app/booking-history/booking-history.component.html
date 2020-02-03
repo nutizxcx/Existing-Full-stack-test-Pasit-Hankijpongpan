@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 style="text-align: center; margin-top: 40px;" class="boldFont">ประวัติการจองโรงแรม</h1>
+  <div class="showTable">
+    <div class="topic">
+      <div class="order boldFont">ลำดับ</div>
+      <div class="hotelName boldFont">โรงแรม</div>
+      <div class="dateIn boldFont">วัน check-in</div>
+      <div class="dateOut boldFont">วัน check-out</div>
+      <div class="guestAmount boldFont">จำนวนแขก</div>
+      <div class="totalPrice boldFont">ค่าที่พักทั้งหมด</div>
+    </div>
+    <div class="history" *ngFor="let hist of bookingHistData; let i = index">
+    <div class="order lightFont">{{i+1}}</div>
+      <div class="hotelName lightFont">{{hist.hotelName}}</div>
+      <div class="dateIn lightFont">{{hist.checkinDate}}</div>
+      <div class="dateOut lightFont">{{hist.checkoutDate}}</div>
+      <div class="guestAmount lightFont" >{{hist.guestAmount}}</div>
+      <div class="totalPrice lightFont">{{hist.totalPrice}}</div>
+    </div>
+  </div>
+</div>

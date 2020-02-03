@@ -1,0 +1,43 @@
+.inputText{
+  width: 100%;
+  padding: 5px 15px;
+  border: 1px solid #E5E5E5;
+  font-size: 15px;
+  color: #16CCB9;
+}
+
+.inputTextInvalid{
+  width: 100%;
+  color: #16CCB9;
+  font-size: 15px;
+  border: 0;
+  padding: 5px 15px;
+  border: 1px solid #E6451D;
+}
+
+.lightFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 100;
+}
+
+.boldFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+}
+
+.container{
+  margin:auto;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.loginBtn{
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+  border: 0;
+  font-size: 13px;
+  border-radius: 15px;
+  background-color: #16CCB9;
+
+}

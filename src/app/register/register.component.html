@@ -1,0 +1,37 @@
+<div class="registerContainer">
+  <p class="boldFont" style="font-size: 18px; text-align: center; margin-bottom: 7px;">ลงทะบียน</p>
+  <form [formGroup]='regisForm' (ngSubmit)="onSubmit()" class="lightFont" style="width: 90%; margin: auto;">
+    <div style="">
+      <p class="topic">อีเมล์</p>
+      <input type="email" formControlName='email' maxlength="50" [ngClass]=" emailValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+    <div style="width: 48.5%; display: inline-block; margin-right: 3%;">
+      <p class="topic">รหัสผ่าน</p>
+      <input type="password" formControlName='password'  [ngClass]=" passwordValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+    <div style="width: 48.5%; display: inline-block;">
+      <p class="topic">ยืนยันรหัสผ่าน</p>
+      <input type="password" formControlName='confPw' [ngClass]=" confPwValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+    <div>
+      <p class="topic">ชื่อ</p>
+      <input type="text" formControlName='firstName' [ngClass]=" firstNameValid ? 'inputBox':'invalidBox'" > <br>
+    </div>
+    <div>
+      <p class="topic">นามสกุล</p>
+      <input type="text" formControlName='lastName' [ngClass]=" lastNameValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+    <div style="width:40%; display: inline-block; margin-right: 3%;">
+      <p class="topic">วัน/เดือน/ปี เกิด</p>
+      <input type="date" formControlName='birthDay' max={{currentDate}} [ngClass]=" birthDayValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+    <div style="width:57%; display: inline-block;">
+      <p class="topic">เบอร์โทรศัพท์</p>
+      <input type="text" formControlName='tel' [ngClass]=" telValid ? 'inputBox':'invalidBox'"> <br>
+    </div>
+
+    <input type="submit" value="ลงทะเบียน" class="regisBtn">
+
+  </form>
+
+</div>

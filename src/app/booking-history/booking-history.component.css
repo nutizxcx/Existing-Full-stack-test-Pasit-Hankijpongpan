@@ -1,0 +1,71 @@
+.showTable{
+  width: 65%;
+  margin:auto;
+  padding: 10px;
+}
+
+.topic {
+  text-align: center;
+  max-height: 30px;
+  padding: 15px 0 ;
+  border: 1px solid #E5E5E5;
+  border-left: 0;
+  border-right: 0;
+  background-color: #4E5453;
+  color:white;
+}
+
+.history{
+  text-align: center;
+  max-height: 30px;
+  padding: 15px 0 ;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.order{
+  width: 10%;
+  display: inline-block;
+  /* background-color: red; */
+}
+
+
+
+.hotelName{
+  width: 25%;
+  display: inline-block;
+  /* background-color: green; */
+}
+
+.dateIn{
+  width: 20%;
+  display: inline-block;
+  /* background-color: blue; */
+}
+
+.dateOut{
+  width: 20%;
+  display: inline-block;
+  /* background-color: black; */
+}
+
+.guestAmount{
+  width: 10%;
+  display: inline-block;
+  /* background-color: yellow; */
+}
+
+.totalPrice{
+  width: 15%;
+  display: inline-block;
+  /* background-color: pink; */
+}
+
+.lightFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 100;
+}
+
+.boldFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+}

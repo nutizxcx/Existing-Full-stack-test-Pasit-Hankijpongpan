@@ -1,0 +1,168 @@
+.pics{
+  height: 450px;
+  width: 100%;
+
+}
+
+.guest {
+  margin: 16px 0;
+}
+
+.hotelPic1 {
+  height:100%;
+  width: 50%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.lightFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 100;
+}
+
+.boldFont{
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+}
+
+.container1{
+  height: 100%;
+  width:25%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.container2{
+  height: 100%;
+  width:25%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.hotelPic2345{
+  height:50%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  display: block;
+
+}
+
+.hotelDetailContainer{
+  width: 60%;
+  /* background-color: red; */
+  display: inline-table;
+}
+
+.hotelDetail{
+  width:80%;
+  margin: auto;
+}
+
+
+.hotelReserveContainer{
+  width: 40%;
+  margin: 50px 0;
+  /* background-color: gray; */
+  display: inline-table;
+
+}
+
+.hotelReserve{
+
+  border: 1px solid #E5E5E5;
+  width: 100%;
+  margin: auto;
+  width:70%;
+  padding: 30px 40px;
+}
+
+.hotelAddress{
+  margin: 16px 0;
+}
+
+.hotelGeneral{
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.hotelDescrip{
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.hotelFacilities{
+  border-bottom: 1px solid #E5E5E5;
+  max-height: 200px;
+  padding: 0 0 30px 0;
+}
+
+
+.hotelMap{
+  border-bottom: 1px solid #E5E5E5;
+
+}
+
+.mapContainer{
+  height: 350px;
+  width: 600px;
+}
+
+
+
+.reserveButton{
+  width:100%;
+  text-align: center;
+}
+
+.leftItem {
+  width:40%;
+  margin-bottom: 16px;
+  display: inline-table;
+}
+
+
+.centerItem{
+  width:20%;
+  margin-bottom: 16px;
+  display: inline-table;
+  text-align: right;
+}
+
+.rightItem{
+  margin-left: 5%;
+  margin-bottom: 16px;
+  width:10%;
+  display: inline-table;
+}
+
+.calculatePrice{
+  text-align: center;
+  /* border: 1px solid #E5E5E5; */
+  margin: 20px auto;
+  width: 100%;
+  padding-top:16px;
+}
+
+.detailAndReserve{
+  margin:auto;
+  width:90%;
+}
+
+.reserveBtn{
+  color: white;
+  width: 100%;
+  padding: 7px 15px;
+  border: 0;
+  font-size: 12px;
+  border-radius: 15px;
+  background-color: #16CCB9;
+  cursor: pointer;
+}
+
+
+.datePickerDec{
+  padding: 5px 7px;
+  /* margin-right: 10px; */
+}

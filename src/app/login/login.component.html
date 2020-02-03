@@ -1,0 +1,17 @@
+<div class="loginContainer" style=" padding:0 0 30px 0;  margin:auto; ">
+  <p class="boldFont" style="font-size: 18px; text-align: center;">กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบ</p>
+  <form [formGroup]='loginForm' (ngSubmit)='OnSubmit()'>
+  <div class="container"  >
+    <p style="margin:0;" class="lightFont">อีเมล์</p>
+    <input type="email" formControlName='email' maxlength="50"  [ngClass]= "isEmailValid ? 'inputText':'inputTextInvalid'" > <br>
+  </div>
+  <div class="container">
+    <p style="margin:0;" class="lightFont">รหัสผ่าน</p>
+    <input type="password" formControlName='password' maxlength="30" [ngClass]= "isPasswordValid ? 'inputText':'inputTextInvalid'"> <br> <br>
+  </div>
+  <div class="container">
+  <input class="lightFont loginBtn" type="submit" value="ล็อกอิน" style="margin:auto;">
+  </div>
+  </form>
+
+</div>

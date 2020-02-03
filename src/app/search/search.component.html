@@ -1,0 +1,24 @@
+
+<div class="searchBoxContainer" >
+  <div style="width: 100%; ">
+    <input placeholder="search" class="searchBox" type="search" [(ngModel)]="searchContent" (ngModelChange)="searchSuggest()" style="width: 100%;">
+  </div>
+  <!-- <div class="suggest" style="width:100%; max-height: 300px; overflow: scroll; "> -->
+    <a href={{x}} style="text-decoration: none; color:black;">
+    <div *ngFor="let result of searchResp" (click)="selectHotel(result.hotelID)" class="suggestItem" >
+
+      <div style="width: 50%; display: inline-block;">
+        <p class="boldFont" style="margin: 0;">{{result.hotelName}}</p>
+        <span class="lightFont" style="font-size: 13px; margin-right:10px;">{{result.province}}</span>
+        <span class="lightFont" style="font-size: 13px;">{{result.district}}</span>
+      </div>
+
+      <div style="width: 25%; display: inline-block; margin-left:25%;">
+        <span class="lightFont">{{result.pricePerNight}} บาทต่อคืน</span>
+      </div>
+
+    </div>
+  </a>
+
+  </div>
+<!-- </div> -->
