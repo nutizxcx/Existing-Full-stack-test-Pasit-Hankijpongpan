@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'hotelInfo/:hotelID', component: HotelInfoComponent},
   {path: 'bookingHistory', component: BookingHistoryComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', redirectTo: '/home', pathMatch: 'full'}
+  // {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
